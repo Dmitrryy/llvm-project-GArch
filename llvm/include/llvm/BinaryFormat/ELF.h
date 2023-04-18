@@ -676,6 +676,11 @@ enum {
 #include "ELFRelocs/RISCV.def"
 };
 
+// ELF Relocation types for RISC-V
+enum {
+#include "ELFRelocs/sim.def"
+};
+
 enum {
   // Symbol may follow different calling convention than the standard calling
   // convention.
@@ -1043,6 +1048,7 @@ enum : unsigned {
   SHT_MSP430_ATTRIBUTES = 0x70000003U,
 
   SHT_RISCV_ATTRIBUTES = 0x70000003U,
+  SHT_sim_ATTRIBUTES = 0x70000003U,
 
   SHT_CSKY_ATTRIBUTES = 0x70000001U,
 
