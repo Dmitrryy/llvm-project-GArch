@@ -129,11 +129,6 @@ void simDAGToDAGISel::Select(SDNode *Node) {
     ReplaceNode(Node, CurDAG->getMachineNode(sim::ADDI, DL, VT, TFI, Imm));
     return;
   }
-
-  default: 
-    // wtf 401 opcode
-    dbgs() << "DEBUG OPCODE: " << Opcode << "; sim " << ISD::BR << '\n';
-    Node->dump();
   }
   SelectCode(Node);
 }
